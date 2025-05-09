@@ -31,4 +31,8 @@ export class UserService {
 
     return newUser.save();
   }
+
+  async findByUser(username: string) {
+    return this.userModel.findOne({ username });
+  }
 }

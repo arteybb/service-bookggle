@@ -7,6 +7,7 @@ import { PassportModule } from '@nestjs/passport';
 import { APP_FILTER } from '@nestjs/core';
 import { HttpExceptionFilter } from './common/http-exception/http-exception.filter';
 import { UserModule } from './modules/user/user.module';
+import { AuthModule } from './modules/auth/auth.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -23,6 +24,7 @@ import { UserModule } from './modules/user/user.module';
     }),
     PassportModule.register({ defaultStrategy: 'jwt' }),
     UserModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [
