@@ -1,9 +1,6 @@
 import { IsEnum, IsNotEmpty, IsString } from 'class-validator';
+import { Role } from 'src/type/role.type';
 
-enum Role {
-  ADMIN = 'A',
-  MEMBER = 'M',
-}
 export class RegisterDTO {
   @IsString()
   @IsNotEmpty()
