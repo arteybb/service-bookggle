@@ -10,7 +10,7 @@ export class UserService {
 
   async register(registerDto: RegisterDTO): Promise<User> {
     const user = await this.userModel.findOne({
-      username: registerDto.username,
+      email: registerDto.email,
     });
     if (user) {
       throw new HttpException(
@@ -32,7 +32,7 @@ export class UserService {
     return newUser.save();
   }
 
-  async findByUser(username: string) {
-    return this.userModel.findOne({ username });
+  async findByUser(email: string) {
+    return this.userModel.findOne({ email });
   }
 }

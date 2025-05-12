@@ -22,7 +22,7 @@ import { AuthModule } from './modules/auth/auth.module';
         };
       },
     }),
-    PassportModule.register({ defaultStrategy: 'jwt' }),
+    PassportModule.register({ defaultStrategy: 'firebase-jwt' }),
     UserModule,
     AuthModule,
   ],

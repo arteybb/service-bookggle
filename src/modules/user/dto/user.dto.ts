@@ -4,7 +4,7 @@ import { Role } from 'src/type/role.type';
 export class RegisterDTO {
   @IsString()
   @IsNotEmpty()
-  readonly username: string;
+  readonly email: string;
 
   @IsString()
   @IsNotEmpty()
